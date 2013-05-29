@@ -18,7 +18,7 @@ namespace fast_export
 
 		public override void RenderCommand(Stream stream)
 		{
-			stream.WriteLine(string.Format("R {0} {1}", this.Source, this.Path));
+			stream.WriteLine(string.Format("R \"{0}\" \"{1}\"", this.Source, this.Path));
 		}
 	}
 }

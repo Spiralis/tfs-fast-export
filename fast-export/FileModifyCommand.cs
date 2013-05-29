@@ -29,12 +29,12 @@ namespace fast_export
 			{
 				stream.WriteString("M 644 ");
 				Blob.RenderMarkReference(stream);
-				stream.WriteString(" " + Path);
+				stream.WriteString(string.Format(" \"{0}\"", Path));
 				stream.WriteLineFeed();
 			}
 			else
 			{
-				stream.WriteLine(string.Format("M 644 inline {0}", Path));
+				stream.WriteLine(string.Format("M 644 inline \"{0}\"", Path));
 				stream.RenderCommand(Data);
 			}
 		}
